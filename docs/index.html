@@ -79,7 +79,7 @@ $(function(){
 function updateScore(){
   var note = $( "#score" ).val();
   //note = note.split( "\n" ).join( "\\n" );
-  var o = ABCJS.renderAbc( "note", note )[0];
+  var o = ABCJS.renderAbc( "note", note, { responsive: "resize" } )[0];
 
   var synthControl = new ABCJS.synth.SynthController();
   synthControl.load( "#player", null, { displayRestart: true, displayPlay: true, displayProgress: true } );
